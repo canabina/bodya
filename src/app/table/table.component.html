@@ -1,0 +1,10 @@
+<table>
+    <tr>
+      <th (click)="updateTable('colorName')">Color name</th>
+      <th (click)="updateTable('hexValue')">Color</th>
+    </tr>
+    <tr *ngFor="let color of colorsArray">
+      <td>{{color.colorName}}</td>
+      <td [ngStyle]="{'background': color.hexValue}"></td>
+    </tr>
+</table>
